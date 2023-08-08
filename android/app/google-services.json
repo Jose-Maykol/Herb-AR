@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "960742786089",
+    "project_id": "herb-ar",
+    "storage_bucket": "herb-ar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960742786089:android:679e45bebb350221dd0838",
+        "android_client_info": {
+          "package_name": "com.example.herb_ar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960742786089-sc60oqmllvltvsnet2kdihavf7k9r4h9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXA-41G-o3_W-2I6yanPzhInEcbZLVBo4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960742786089-sc60oqmllvltvsnet2kdihavf7k9r4h9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
