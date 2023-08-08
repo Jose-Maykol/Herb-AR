@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:herb_ar/models/plant.dart';
+import 'package:herb_ar/screens/plant_detail.dart';
 
 class PlantList extends StatelessWidget {
   const PlantList({super.key});
@@ -24,20 +25,28 @@ class PlantList extends StatelessWidget {
               itemCount: plants.length,
               itemBuilder: (context, index) {
                 Plant plant = plants[index];
-                return ListTile(
-                  leading: Container(
-                    width: 50, // Ancho de la imagen
-                    height: 50, // Alto de la imagen
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                        image: NetworkImage(plant.imageUrl ?? ''),
-                        fit: BoxFit.cover,
+                return InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PlantDetail(plant: plant)),
+                    );
+                  },
+                  child: ListTile(
+                    leading: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image: NetworkImage(plant.imageUrl ?? ''),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
+                    title: Text(plant.commonName ?? 'Unknown'),
+                    subtitle: Text(plant.scientificName ?? 'Unknown'),
                   ),
-                  title: Text(plant.commonName ?? 'Unknown'),
-                  subtitle: Text(plant.scientificName ?? 'Unknown'),
                 );
               },
             );
