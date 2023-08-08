@@ -75,7 +75,16 @@ class PlantDetail extends StatelessWidget {
                   plant.description ?? 'No description available.',
                   style: const TextStyle(fontSize: 16),
                 ),
-                // Agrega más detalles según tu modelo de datos
+                const SizedBox(height: 16),
+                const Text(
+                  'Propiedades medicinales:',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: verde500),
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  plant.medicinalProperties ?? 'No description available.',
+                  style: const TextStyle(fontSize: 16),
+                ),
               ],
             ),
           ),
